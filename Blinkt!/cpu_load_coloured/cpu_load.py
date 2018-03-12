@@ -29,6 +29,9 @@ blinkt.set_brightness(0.1)
 while True:
     cpu = psutil.cpu_percent(interval=0.1)
     v = cpu / 100.0
+    # Debug prints
+    print cpu
+    print v
     if (cpu < 10):
             show_graph(v,0,255,0)    # Green
     elif (cpu > 11) and (cpu < 20):
@@ -47,8 +50,8 @@ while True:
             show_graph(v,255,113,0)
     elif (cpu > 81) and (cpu < 90):
             show_graph(v,255,56,0)
-    else:
-        show_graph(v,255,0,0)         # Red
+    elif (cpu >91):
+            show_graph(v,255,0,0)  # Red
     time.sleep(0.1)
 
 
