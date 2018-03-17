@@ -52,6 +52,6 @@ while True:
             show_graph(v,255,56,0)
     elif (cpu >91):
             show_graph(v,255,0,0)  # Red
-    time.sleep(0.1)
+    time.sleep(0.01)
 
 
