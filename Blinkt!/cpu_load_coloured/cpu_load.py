@@ -30,8 +30,8 @@ while True:
     cpu = psutil.cpu_percent(interval=0.1)
     v = cpu / 100.0
     # Debug prints
-    print cpu
-    print v
+#    print cpu
+#    print v
     if (cpu < 10):
             show_graph(v,0,255,0)    # Green
     elif (cpu > 11) and (cpu < 20):
